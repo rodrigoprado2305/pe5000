@@ -1,0 +1,6 @@
+create table perguntas (
+perguntaid  integer constraint pk_perguntaid primary key,
+descricao varchar(255),
+certa varchar(45),
+errada varchar(45)
+);

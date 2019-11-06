@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/07/27 12:22:29.000.433,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/08/15 20:49:53.000.536,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/10/09 22:18:12.000.540,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/10/27 21:00:45.387,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/10/27 21:02:10.780,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\frmLogin.fmx=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2019/10/27 21:02:10.780,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\frmLogin.pas=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/10/27 21:02:35.404,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\pe5000.dproj=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/10/27 21:09:38.439,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Unit1.pas</Transaction>
+    <Transaction>2019/10/27 21:09:53.459,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Unit2.pas</Transaction>
+    <Transaction>2019/10/27 21:10:03.037,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\frmQuiz.fmx=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Unit2.fmx</Transaction>
+    <Transaction>2019/10/27 21:10:03.037,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\frmQuiz.pas=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Unit2.pas</Transaction>
+    <Transaction>2019/10/27 21:11:01.663,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Unit3.pas</Transaction>
+    <Transaction>2019/10/27 21:11:23.516,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\frmEstatisticas.fmx=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Unit3.fmx</Transaction>
+    <Transaction>2019/10/27 21:11:23.516,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\frmEstatisticas.pas=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Unit3.pas</Transaction>
+  </Transactions>  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5" Android="0060853145"/>
+  </ActiveMobileDevice>
+</BorlandProject>

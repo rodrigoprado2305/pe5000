@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/01/02 22:30:56.000.929,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/01/29 21:44:36.000.438,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/03/05 20:05:13.000.568,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/05 09:29:29.000.019,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/05 09:33:27.000.033,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/10 10:28:07.000.717,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/10 11:58:24.000.826,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/10 16:24:12.000.221,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/10 16:41:39.000.744,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/10 16:52:55.000.096,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/20 20:20:12.000.410,=C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/20 20:21:00.000.892,C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\Quiz 2020\Importar\Unit1.dfm</Transaction>
+    <Transaction>2019/06/20 20:21:00.000.892,C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\Quiz 2020\Importar\Unit1.pas</Transaction>
+    <Transaction>2019/06/20 20:21:03.000.373,C:\Users\rod_c\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\Quiz 2020\Importar\Project1.dproj</Transaction>
+    <Transaction>2019/09/11 20:57:50.000.161,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\soPerguntas\Comum\uDMConexao.pas</Transaction>
+    <Transaction>2019/09/11 20:58:19.000.977,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\soPerguntas\Comum\uBiblioteca.pas</Transaction>
+    <Transaction>2019/11/04 21:48:13.000.716,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\uBiblioteca.pas</Transaction>
+    <Transaction>2019/11/04 21:48:14.000.488,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\uDMConexao.pas</Transaction>
+    <Transaction>2019/11/04 21:49:25.000.349,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\uDMConexao.pas=</Transaction>
+    <Transaction>2019/11/04 21:49:25.000.375,D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Fontes\uBiblioteca.pas=</Transaction>
+    <Transaction>2019/11/04 21:50:01.000.675,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Comum\uBiblioteca.pas</Transaction>
+    <Transaction>2019/11/04 21:50:01.000.750,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\Comum\uDMConexao.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>
