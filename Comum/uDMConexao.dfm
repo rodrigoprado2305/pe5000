@@ -33,7 +33,7 @@ object DM: TDM
   end
   object qryTemp: TFDQuery
     Connection = BD
-    Left = 280
+    Left = 248
     Top = 73
   end
 end
