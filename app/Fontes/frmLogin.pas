@@ -10,6 +10,8 @@ uses
 type
   TFormLogin = class(TForm)
     Button1: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
@@ -28,6 +30,10 @@ uses frmQuiz;
 
 procedure TFormLogin.Button1Click(Sender: TObject);
 begin
+  FormQuiz.lblPergRespondidas.Text := '0';
+  FormQuiz.lblAcertos.Text := '0';
+  FormQuiz.lblErros.Text := '0.00';
+  FormQuiz.lblPontos.Text := 'Você tem: 0 pontos';
   FormQuiz.Show;
 end;
 

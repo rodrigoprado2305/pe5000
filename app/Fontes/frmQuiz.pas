@@ -31,15 +31,16 @@ type
     lbl3: TLabel;
     lblErros: TLabel;
     ToolBar1: TToolBar;
-    btnSair: TSpeedButton;
+    Button1: TButton;
+    Image1: TImage;
     procedure btnInfoClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure timer1Timer(Sender: TObject);
     procedure btnResp01Click(Sender: TObject);
-    procedure btnSairClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
-    iPergRespondidas, iAcertos, iErros: Integer;
+    iPergRespondidas, iAcertos, iAcertosSeq, iErros, iPontos: integer;
     sRespClicada: String;
     procedure proximaFase;
   public
@@ -48,9 +49,6 @@ type
 
 var
   FormQuiz: TFormQuiz;
-
-const
-  NUM_FASES = 5;
 
 implementation
 
@@ -79,17 +77,23 @@ begin
   timer1.Enabled := True;
 end;
 
-procedure TFormQuiz.btnSairClick(Sender: TObject);
+procedure TFormQuiz.Button1Click(Sender: TObject);
 begin
   FormEstatisticas.lblPergRespondidas.Text := IntToStr(iPergRespondidas);
   FormEstatisticas.lblAcertos.Text := IntToStr(iAcertos);
   FormEstatisticas.lblErros.Text := FormatFloat('0.00',(iAcertos*100)/iPergRespondidas);
   FormEstatisticas.Show;
+  Close;
 end;
 
 procedure TFormQuiz.FormShow(Sender: TObject);
 begin
   proximaFase;
+  iPontos := 0;
+  iAcertos := 0;
+  iErros := 0;
+  iPergRespondidas := 0;
+  iAcertosSeq := 0;
 end;
 
 procedure TFormQuiz.proximaFase;
@@ -110,18 +114,43 @@ begin
 end;
 
 procedure TFormQuiz.timer1Timer(Sender: TObject);
+var
+  iBonus: integer;
 begin
   inc(iPergRespondidas);
   if sRespClicada = dm.psResposta then
-    inc(iAcertos)
+  begin
+    inc(iAcertos);
+    inc(iAcertosSeq);
+    iPontos := iPontos + iAcertos;
+    iBonus := 0;
+    case iAcertosSeq of
+      5 : iBonus := 10;
+      10: iBonus := 50;
+      20: iBonus := 100;
+      40: iBonus := 500;
+      50: iBonus := 1000;
+      70: iBonus := 2000;
+      100 : iBonus := 5000;
+      150 : iBonus := 7000;
+      200 : iBonus := 15000;
+    end;
+    iPontos := iPontos + iBonus;
+    if iBonus = 200 then
+      iAcertosSeq := 0;
+  end
   else
+  begin
+    iAcertosSeq := 0;
     inc(iErros);
+  end;
   proximaFase;
   timer1.Enabled := False;
 
   lblPergRespondidas.Text := IntToStr(iPergRespondidas);
   lblAcertos.Text := IntToStr(iAcertos);
   lblErros.Text := FormatFloat('0.00',(iAcertos*100)/iPergRespondidas);
+  lblPontos.Text := 'Você tem: '+IntToStr(iPontos)+' pontos';
   //lblErros.Text := IntToStr(iErros);
    //    FormPontuacao.lblPercAcerto.Text := FormatFloat('0.00',(iAcerto*100)/NUM_FASES);
 end;

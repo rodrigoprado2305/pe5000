@@ -30,7 +30,10 @@ type
     lblResultados: TLabel;
     barCabecalho: TToolBar;
     btnSair: TSpeedButton;
+    ToolBar1: TToolBar;
+    btnJogarNovamente: TSpeedButton;
     procedure btnSairClick(Sender: TObject);
+    procedure btnCompartilharClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,6 +46,11 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TFormEstatisticas.btnCompartilharClick(Sender: TObject);
+begin
+  close; //tela de compartilhar nao eh pra fechar, compartilha e mantem a tela
+end;
 
 procedure TFormEstatisticas.btnSairClick(Sender: TObject);
 begin

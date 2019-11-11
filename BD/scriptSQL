@@ -4,3 +4,9 @@ descricao varchar(255),
 certa varchar(45),
 errada varchar(45)
 );
+
+
+select length(descricao), descricao, perguntaid, length(certa), certa, length(errada), errada from perguntas 
+select * from perguntas
+O gás carbônico é utilizados pelas plantas para a realização da fotossíntese.. --- a maior descricao eh 77
+Como você se sente hoje? --- a maior resposta e 24
