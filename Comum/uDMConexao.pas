@@ -22,7 +22,8 @@ type
     { Private declarations }
   public
     { Public declarations }
-    psResposta: String;
+    psResposta, psNome, psEscola: String;
+    piPontos: integer;
     procedure filtraPergunta(iPerguntaID: Integer);
   end;
 

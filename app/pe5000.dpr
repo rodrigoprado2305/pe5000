@@ -3,7 +3,7 @@ program pe5000;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  frmLogin in 'Fontes\frmLogin.pas' {FormLogin},
+  frmEntrada in 'Fontes\frmEntrada.pas' {FormEntrada},
   frmQuiz in 'Fontes\frmQuiz.pas' {FormQuiz},
   frmEstatisticas in 'Fontes\frmEstatisticas.pas' {FormEstatisticas},
   uBiblioteca in '..\Comum\uBiblioteca.pas',
@@ -14,10 +14,14 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TFormLogin, FormLogin);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFormEntrada, FormEntrada);
   Application.CreateForm(TFormQuiz, FormQuiz);
   Application.CreateForm(TFormEstatisticas, FormEstatisticas);
-  Application.CreateForm(TDM, DM);
   Application.CreateForm(TFormInformacao, FormInformacao);
+  Application.FormFactor.Orientations := [TFormOrientation.Portrait];
   Application.Run;
 end.
+
+
+

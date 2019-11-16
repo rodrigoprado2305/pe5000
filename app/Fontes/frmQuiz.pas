@@ -14,7 +14,6 @@ type
     btnResp01: TButton;
     btnResp02: TButton;
     barCabecalho: TToolBar;
-    btnVoltar: TSpeedButton;
     btnInfo: TSpeedButton;
     lblPontos: TLabel;
     MediaPlayer1: TMediaPlayer;
@@ -30,17 +29,16 @@ type
     lblAcertos: TLabel;
     lbl3: TLabel;
     lblErros: TLabel;
-    ToolBar1: TToolBar;
-    Button1: TButton;
-    Image1: TImage;
+    barControle: TToolBar;
+    btnFinalizar: TButton;
     procedure btnInfoClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure timer1Timer(Sender: TObject);
     procedure btnResp01Click(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure btnFinalizarClick(Sender: TObject);
   private
     { Private declarations }
-    iPergRespondidas, iAcertos, iAcertosSeq, iErros, iPontos: integer;
+    iPergRespondidas, iAcertos, iAcertosSeq, iErros, iPontos, iFaseAtual: integer;
     sRespClicada: String;
     procedure proximaFase;
   public
@@ -77,29 +75,39 @@ begin
   timer1.Enabled := True;
 end;
 
-procedure TFormQuiz.Button1Click(Sender: TObject);
+procedure TFormQuiz.btnFinalizarClick(Sender: TObject);
 begin
+  DM.piPontos := iPontos;
+  FormEstatisticas.lblResultados.Text := 'Você conquistou '+IntToStr(iPontos)+' pontos';
   FormEstatisticas.lblPergRespondidas.Text := IntToStr(iPergRespondidas);
   FormEstatisticas.lblAcertos.Text := IntToStr(iAcertos);
-  FormEstatisticas.lblErros.Text := FormatFloat('0.00',(iAcertos*100)/iPergRespondidas);
+  try
+    FormEstatisticas.lblErros.Text := FormatFloat('0.00',(iAcertos*100)/iPergRespondidas);
+  except
+    FormEstatisticas.lblErros.Text := '0.00';
+  end;
+  FormEstatisticas.lblNome.Text := DM.psNome;
+  FormEstatisticas.lblEscola.Text := DM.psEscola;
   FormEstatisticas.Show;
   Close;
 end;
 
 procedure TFormQuiz.FormShow(Sender: TObject);
 begin
-  proximaFase;
   iPontos := 0;
   iAcertos := 0;
   iErros := 0;
   iPergRespondidas := 0;
   iAcertosSeq := 0;
+  iFaseAtual := 0;
+  proximaFase;
 end;
 
 procedure TFormQuiz.proximaFase;
 var
   iRandomPerg: Integer;
 begin
+  inc(iFaseAtual);
   imgOk.Visible := False;
   imgErro.Visible := False;
 
@@ -122,7 +130,7 @@ begin
   begin
     inc(iAcertos);
     inc(iAcertosSeq);
-    iPontos := iPontos + iAcertos;
+    iPontos := iPontos + iFaseAtual;
     iBonus := 0;
     case iAcertosSeq of
       5 : iBonus := 10;
