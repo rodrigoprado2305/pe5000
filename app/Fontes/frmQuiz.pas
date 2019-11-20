@@ -58,7 +58,6 @@ implementation
 uses uDMConexao, System.Math, frmInformacao, frmEstatisticas;
 
 {$R *.fmx}
-{$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure TFormQuiz.btnInfoClick(Sender: TObject);
 begin
@@ -187,3 +186,4 @@ begin
 end;
 
 end.
+

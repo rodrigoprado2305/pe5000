@@ -369,7 +369,11 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Android)'!=''">
         <VerInfo_Build>1</VerInfo_Build>
-        <Android_NotificationAccentColor>#000000</Android_NotificationAccentColor>
+        <Android_LauncherIcon36>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\36x36x.png</Android_LauncherIcon36>
+        <Android_LauncherIcon48>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\48x48x.png</Android_LauncherIcon48>
+        <Android_LauncherIcon72>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\72x72x.png</Android_LauncherIcon72>
+        <Android_LauncherIcon96>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\96x96x.png</Android_LauncherIcon96>
+        <Android_LauncherIcon144>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\144X144X.png</Android_LauncherIcon144>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
