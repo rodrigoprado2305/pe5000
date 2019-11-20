@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
-  FMX.Media, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Layouts;
+  FMX.Media, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Layouts,
+  FMX.Advertising;
 
 type
   TFormQuiz = class(TForm)
@@ -31,15 +32,19 @@ type
     lblErros: TLabel;
     barControle: TToolBar;
     btnFinalizar: TButton;
+    BannerAd1: TBannerAd;
+    lblLembrete: TLabel;
     procedure btnInfoClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure timer1Timer(Sender: TObject);
     procedure btnResp01Click(Sender: TObject);
     procedure btnFinalizarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     iPergRespondidas, iAcertos, iAcertosSeq, iErros, iPontos, iFaseAtual: integer;
     sRespClicada: String;
+    sFrases: array[0..9] of string;
     procedure proximaFase;
   public
     { Public declarations }
@@ -53,6 +58,7 @@ implementation
 uses uDMConexao, System.Math, frmInformacao, frmEstatisticas;
 
 {$R *.fmx}
+{$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure TFormQuiz.btnInfoClick(Sender: TObject);
 begin
@@ -92,6 +98,20 @@ begin
   Close;
 end;
 
+procedure TFormQuiz.FormCreate(Sender: TObject);
+begin
+  sFrases[0]  := 'Pense na resposta...';
+  sFrases[1]  := 'Leia e responda...';
+  sFrases[2]  := 'Pense antes de responder...';
+  sFrases[3]  := 'Responda com atenção';
+  sFrases[4]  := 'Será que você sabe?';
+  sFrases[5]  := 'Essa é um pouco difícil!';
+  sFrases[6]  := 'Sempre que você responde... Você aprende!';
+  sFrases[7]  := 'Quanto mais você responder em sequência mais pontos você ganha';
+  sFrases[8]  := 'Esse jogo avalia você! Conforme você joga, pontos surpresas você recebe';
+  sFrases[9]  := 'Jogue e aprenda';
+end;
+
 procedure TFormQuiz.FormShow(Sender: TObject);
 begin
   iPontos := 0;
@@ -105,11 +125,14 @@ end;
 
 procedure TFormQuiz.proximaFase;
 var
-  iRandomPerg: Integer;
+  iRandomPerg, i: Integer;
 begin
   inc(iFaseAtual);
   imgOk.Visible := False;
   imgErro.Visible := False;
+
+  i := RandomRange(0, 9);
+  lblLembrete.Text := sFrases[i];
 
   iRandomPerg := RandomRange(1, 5000);
 
