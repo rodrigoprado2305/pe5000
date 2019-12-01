@@ -423,21 +423,21 @@
         <Cfg_2_Android>true</Cfg_2_Android>
         <CfgParent>Cfg_2</CfgParent>
         <Cfg_2>true</Cfg_2>
-        <VerInfo_Build>1</VerInfo_Build>
+        <VerInfo_Build>2</VerInfo_Build>
         <Android_LauncherIcon36>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\36x36x.png</Android_LauncherIcon36>
         <Android_LauncherIcon48>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\48x48x.png</Android_LauncherIcon48>
         <Android_LauncherIcon72>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\72x72x.png</Android_LauncherIcon72>
         <Android_LauncherIcon96>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\96x96x.png</Android_LauncherIcon96>
         <Android_LauncherIcon144>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\144X144X.png</Android_LauncherIcon144>
-        <PF_KeyStorePass>851D47C65F9307DBCF28E564D171E33F81850535A05F97C997AA0FF88E783C8ADB56A385E3111C2FC1E2577DFAC4C363BA95367E043722D3163A459DE5E4229DC938F341D558FA9BBFF8AF11727085CCF7893354</PF_KeyStorePass>
-        <VerInfo_Keys>package=com.rodrigoprado.pe5000;label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
+        <PF_KeyStorePass>851D47C65F9307DBCF287131D12CE37981B20541A00D978D97E60FBE8E6C3C8ADB57A3DEE3551C63C1E35725FAC7C317BA95360204642291163A459CE5B722BEC916F341D513FACCBFF83B46727085CCF7893354</PF_KeyStorePass>
+        <VerInfo_Keys>package=com.embarcadero.pe5000;label=$(MSBuildProjectName);versionCode=2;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
         <AUP_CAMERA>false</AUP_CAMERA>
         <AUP_CALL_PHONE>false</AUP_CALL_PHONE>
         <AUP_ACCESS_NETWORK_STATE>true</AUP_ACCESS_NETWORK_STATE>
         <AUP_ACCESS_COARSE_LOCATION>false</AUP_ACCESS_COARSE_LOCATION>
         <AUP_ACCESS_FINE_LOCATION>false</AUP_ACCESS_FINE_LOCATION>
         <AUP_READ_PHONE_STATE>false</AUP_READ_PHONE_STATE>
-        <PF_AliasKeyPass>851D47C65F9307DBCF287131D12CE37981B20541A00D978D97E60FBE8E6C3C8ADB57A3DEE3551C63C1E35725FAC7C317BA95360204642291163A459CE5B722BEC916F341D513FACCBFF83B46727085CCF7893354</PF_AliasKeyPass>
+        <PF_AliasKeyPass>851D47C6645855D8A342711DD129E36881D0051BA043979397B40FAB8E363C94DB04A3D7E3401C39C1CC5752FACFC338BAF83613042722C3164B45C2E5BA22DBC90AF35DEE8DA890D38B3B46727085CCF7893354</PF_AliasKeyPass>
         <BT_BuildType>AppStore</BT_BuildType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
