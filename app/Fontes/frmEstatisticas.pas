@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Effects, FMX.Filter.Effects, FMX.Controls.Presentation,
-  FMX.Layouts;
+  FMX.Layouts, frmEntrada;
 
 type
   TFormEstatisticas = class(TForm)
@@ -28,9 +28,9 @@ type
     lblLinhaBot: TLabel;
     lblLinhaTop: TLabel;
     lblResultados: TLabel;
-    ToolBar1: TToolBar;
     lblEscola: TLabel;
-    Button1: TButton;
+    Panel1: TPanel;
+    Button2: TButton;
     procedure btnCompartilharClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
   private

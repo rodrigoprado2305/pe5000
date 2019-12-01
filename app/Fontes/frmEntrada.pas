@@ -11,7 +11,6 @@ uses
 type
   TFormEntrada = class(TForm)
     VertScrollBox1: TVertScrollBox;
-    rectPainel: TRectangle;
     lytAcessar: TLayout;
     edtNome: TEdit;
     imgNome: TImage;
@@ -25,6 +24,7 @@ type
     Label1: TLabel;
     edtEscola: TEdit;
     Image1: TImage;
+    StyleBook1: TStyleBook;
     procedure btnAcessarClick(Sender: TObject);
   private
     { Private declarations }
@@ -51,7 +51,7 @@ begin
 
   if Trim(edtEscola.Text) = '' then
   begin
-    showmessage('Informe o nome de sua Escola/Colégio para continuar!');
+    showmessage('Informe o nome de sua escola para continuar!');
     exit;
   end;
 

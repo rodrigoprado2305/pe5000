@@ -6,14 +6,12 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Media, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Layouts,
-  FMX.Advertising;
+  FMX.Advertising, frmEntrada, System.IOUtils;
 
 type
   TFormQuiz = class(TForm)
     lytMeio: TLayout;
     lblPergunta: TLabel;
-    btnResp01: TButton;
-    btnResp02: TButton;
     barCabecalho: TToolBar;
     btnInfo: TSpeedButton;
     lblPontos: TLabel;
@@ -30,22 +28,29 @@ type
     lblAcertos: TLabel;
     lbl3: TLabel;
     lblErros: TLabel;
-    barControle: TToolBar;
-    btnFinalizar: TButton;
     BannerAd1: TBannerAd;
     lblLembrete: TLabel;
+    Panel1: TPanel;
+    btnFinalizar: TButton;
+    btnResp01: TSpeedButton;
+    btnResp02: TSpeedButton;
+    chkEfeitosSonoros: TCheckBox;
     procedure btnInfoClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure timer1Timer(Sender: TObject);
     procedure btnResp01Click(Sender: TObject);
     procedure btnFinalizarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure chkEfeitosSonorosChange(Sender: TObject);
   private
     { Private declarations }
     iPergRespondidas, iAcertos, iAcertosSeq, iErros, iPontos, iFaseAtual: integer;
     sRespClicada: String;
     sFrases: array[0..9] of string;
+    bMusica: Boolean;
+
     procedure proximaFase;
+    procedure tocaSom(sArqNome: String);
   public
     { Public declarations }
   end;
@@ -71,13 +76,20 @@ begin
   begin
     imgOk.Visible := True;
     imgErro.Visible := False;
+    tocaSom('rsrcOk');
   end
   else
   begin
     imgOk.Visible := False;
     imgErro.Visible := True;
+    tocaSom('rsrcErro');
   end;
   timer1.Enabled := True;
+end;
+
+procedure TFormQuiz.chkEfeitosSonorosChange(Sender: TObject);
+begin
+  bMusica := not bMusica;
 end;
 
 procedure TFormQuiz.btnFinalizarClick(Sender: TObject);
@@ -109,6 +121,9 @@ begin
   sFrases[7]  := 'Quanto mais você responder em sequência mais pontos você ganha';
   sFrases[8]  := 'Esse jogo avalia você! Conforme você joga, pontos surpresas você recebe';
   sFrases[9]  := 'Jogue e aprenda';
+
+  //BannerAd1.AdUnitID := 'ca-app-pub-9350000386173480/4464322998';
+  bMusica := True;
 end;
 
 procedure TFormQuiz.FormShow(Sender: TObject);
@@ -183,6 +198,42 @@ begin
   lblPontos.Text := 'Você tem: '+IntToStr(iPontos)+' pontos';
   //lblErros.Text := IntToStr(iErros);
    //    FormPontuacao.lblPercAcerto.Text := FormatFloat('0.00',(iAcerto*100)/NUM_FASES);
+end;
+
+procedure TFormQuiz.tocaSom(sArqNome: String);
+var
+  ResStream: TResourceStream;
+  sFile: string;
+begin
+  if bMusica then
+  begin
+    if sArqNome = 'rsrcOk' then
+    begin
+      ResStream := TResourceStream.Create(HInstance, sArqNome, RT_RCDATA);
+      try
+        sFile := TPath.Combine(System.IOUtils.TPath.GetDownloadsPath, 'ok.mp3');
+        ResStream.Position := 0;
+        ResStream.SaveToFile(sFile);
+        MediaPlayer1.FileName := sFile;
+        MediaPlayer1.Play;
+      finally
+        ResStream.Free;
+      end;
+    end
+    else if sArqNome = 'rsrcErro' then
+    begin
+      ResStream := TResourceStream.Create(HInstance, sArqNome, RT_RCDATA);
+      try
+        sFile := TPath.Combine(System.IOUtils.TPath.GetDownloadsPath, 'erro.mp3');
+        ResStream.Position := 0;
+        ResStream.SaveToFile(sFile);
+        MediaPlayer1.FileName := sFile;
+        MediaPlayer1.Play;
+      finally
+        ResStream.Free;
+      end;
+    end;
+  end;
 end;
 
 end.
