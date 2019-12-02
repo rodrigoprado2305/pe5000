@@ -21,7 +21,6 @@ type
     imgLogo1: TImage;
     btnAcessar: TButton;
     lytEspaco: TLayout;
-    Label1: TLabel;
     edtEscola: TEdit;
     Image1: TImage;
     StyleBook1: TStyleBook;
