@@ -72,6 +72,11 @@ end;
 procedure TFormQuiz.btnResp01Click(Sender: TObject);
 begin
   sRespClicada := TButton(Sender).Text;
+
+  btnResp01.Enabled := False;
+  btnResp02.Enabled := False;
+  MediaPlayer1.Clear;
+
   if sRespClicada = dm.psResposta then
   begin
     imgOk.Visible := True;
@@ -122,7 +127,7 @@ begin
   sFrases[8]  := 'Esse jogo avalia você! Conforme você joga, pontos surpresas você recebe';
   sFrases[9]  := 'Jogue e aprenda';
 
-  //BannerAd1.AdUnitID := 'ca-app-pub-9350000386173480/4464322998';
+  BannerAd1.AdUnitID := 'ca-app-pub-9350000386173480/1315110542';
   bMusica := True;
 end;
 
@@ -198,6 +203,8 @@ begin
   end;
   proximaFase;
   timer1.Enabled := False;
+  btnResp01.Enabled := True;
+  btnResp02.Enabled := True;
 
   lblPergRespondidas.Text := IntToStr(iPergRespondidas);
   lblAcertos.Text := IntToStr(iAcertos);
