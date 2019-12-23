@@ -133,6 +133,7 @@ end;
 
 procedure TFormQuiz.FormShow(Sender: TObject);
 begin
+  BannerAd1.LoadAd;
   iPontos := 0;
   iAcertos := 0;
   iErros := 0;
