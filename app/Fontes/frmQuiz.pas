@@ -152,10 +152,17 @@ begin
 
   DM.FiltraPergunta(iRandomPerg);
 
+  i := Random(2)+1;
+
   lblPergunta.Text := DM.qryPerguntas.FieldByName('descricao').AsString;
-  btnResp01.Text := DM.qryPerguntas.FieldByName('certa').AsString;
-  btnResp02.Text := DM.qryPerguntas.FieldByName('errada').AsString;
-  DM.psResposta := btnResp01.Text;
+  btnResp01.Text := DM.qryPerguntas.Fields[i].AsString;//DM.qryPerguntas.FieldByName('certa').AsString;
+
+  if i = 1 then
+    btnResp02.Text := DM.qryPerguntas.Fields[2].AsString
+  else
+    btnResp02.Text := DM.qryPerguntas.Fields[1].AsString;//DM.qryPerguntas.FieldByName('errada').AsString;
+
+  DM.psResposta := DM.qryPerguntas.FieldByName('certa').AsString;//btnResp01.Text;
 end;
 
 procedure TFormQuiz.timer1Timer(Sender: TObject);
