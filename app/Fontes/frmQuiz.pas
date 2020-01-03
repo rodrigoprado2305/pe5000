@@ -81,12 +81,14 @@ begin
   begin
     imgOk.Visible := True;
     imgErro.Visible := False;
+    timer1.Interval := 1000;
     tocaSom('rsrcOk');
   end
   else
   begin
     imgOk.Visible := False;
     imgErro.Visible := True;
+    timer1.Interval := 3000;
     tocaSom('rsrcErro');
   end;
   timer1.Enabled := True;
