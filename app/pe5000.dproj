@@ -423,21 +423,21 @@
         <Cfg_2_Android>true</Cfg_2_Android>
         <CfgParent>Cfg_2</CfgParent>
         <Cfg_2>true</Cfg_2>
-        <VerInfo_Build>2</VerInfo_Build>
+        <VerInfo_Build>3</VerInfo_Build>
         <Android_LauncherIcon36>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\36x36x.png</Android_LauncherIcon36>
         <Android_LauncherIcon48>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\48x48x.png</Android_LauncherIcon48>
         <Android_LauncherIcon72>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\72x72x.png</Android_LauncherIcon72>
         <Android_LauncherIcon96>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\96x96x.png</Android_LauncherIcon96>
         <Android_LauncherIcon144>..\..\..\..\..\Icones_Pngs_Bmps_Gifs\pe5000\144X144X.png</Android_LauncherIcon144>
-        <PF_KeyStorePass>851D47C65F9307DBCF287131D12CE37981B20541A00D978D97E60FBE8E6C3C8ADB57A3DEE3551C63C1E35725FAC7C317BA95360204642291163A459CE5B722BEC916F341D513FACCBFF83B46727085CCF7893354</PF_KeyStorePass>
-        <VerInfo_Keys>package=com.embarcadero.pe5000;label=$(MSBuildProjectName);versionCode=2;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
+        <PF_KeyStorePass>851D47C65F935585A304712AD15DE33A81940557A005978797B40FAA8E6D3CD0DB48A3D6E3181C3AC1B85752FAB3C36BBABA361304262290166845ECE5BA2290C95DF35DD544A890D38B3B46727085CCF7893354</PF_KeyStorePass>
+        <VerInfo_Keys>package=com.embarcadero.pe5000;label=$(MSBuildProjectName);versionCode=3;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
         <AUP_CAMERA>false</AUP_CAMERA>
         <AUP_CALL_PHONE>false</AUP_CALL_PHONE>
         <AUP_ACCESS_NETWORK_STATE>true</AUP_ACCESS_NETWORK_STATE>
         <AUP_ACCESS_COARSE_LOCATION>false</AUP_ACCESS_COARSE_LOCATION>
         <AUP_ACCESS_FINE_LOCATION>false</AUP_ACCESS_FINE_LOCATION>
         <AUP_READ_PHONE_STATE>false</AUP_READ_PHONE_STATE>
-        <PF_AliasKeyPass>851D47C65F9307DBCF28E564A401E36281C30502A02B979B97EE0FB48E3E3C9EDB56A384E34A1C6BC1AE577CFA9CC360BAE1367E044B22801678459DE5E522CEC91BF36FD558FAD0BFAFAF11070285CCF7893354</PF_AliasKeyPass>
+        <PF_AliasKeyPass>851D47C65F9307DBA359716CD16AE34E81C60513A04997C197A00FAA8E6C3C8BDB0CA39AE3191C62C1BB5726FAB3C317BAE9365104262291163B45CFE5942290C916F30AD544FACCD38B3B46727085CCF7893354</PF_AliasKeyPass>
         <BT_BuildType>AppStore</BT_BuildType>
         <DCC_DcuOutput>D:\Desenvolvimento\Delphi\trunk\Projeto Educando\dcu</DCC_DcuOutput>
     </PropertyGroup>

@@ -91,7 +91,6 @@ begin
 
   //SharedActivity.startActivity(IntentWhatsApp); // is deprecated
   TAndroidHelper.Activity.startActivity(IntentWhatsApp);
-  close;
 end;
 
 procedure TFormEstatisticas.Button1Click(Sender: TObject);
