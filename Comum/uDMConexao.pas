@@ -19,12 +19,15 @@ type
     qryTemp: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
+    procedure getLogin(var sNome, sEscola: String);
     { Private declarations }
   public
     { Public declarations }
     psResposta, psNome, psEscola: String;
     piPontos: integer;
     procedure filtraPergunta(iPerguntaID: Integer);
+    procedure setLogin(sNome, sEscola: String);
+    function getVersaoBD: String;
   end;
 
 var
@@ -51,14 +54,7 @@ begin
       raise Exception.Create('Erro de conexão com o banco de dados: ' + E.Message);
   end;
 
-  try
-    //qryPerguntas.Close;
-    //qryPerguntas.Open('select perguntaid, descricao, certa, errada from perguntas');
-  except
-    on E:Exception do
-      raise Exception.Create('Erro de conexão com o banco de dados: ' + E.Message);
-  end;
-
+  getLogin(psNome, psEscola);
 end;
 
 procedure TDM.FiltraPergunta(iPerguntaID: Integer);
@@ -69,6 +65,46 @@ begin
     'where perguntaid =:perguntaid ';
   qryPerguntas.ParamByName('perguntaid').AsInteger := iPerguntaID;
   qryPerguntas.Open;
+end;
+
+procedure TDM.setLogin(sNome, sEscola: String);
+begin
+  qryTemp.Close;
+  qryTemp.SQL.Text :=
+    ' update login set nome =:nome, escola =:escola ';
+  qryTemp.ParamByName('nome').AsString := sNome;
+  qryTemp.ParamByName('escola').AsString := sEscola;
+  try
+     qryTemp.ExecSQL;
+  except
+    on E:Exception do
+      raise Exception.Create('Erro ao atualizar o login: ' + E.Message);
+  end;
+end;
+
+procedure TDM.getLogin(var sNome, sEscola: String);
+begin
+  qryTemp.Close;
+  try
+    qryTemp.Open('select nome, escola from login');
+  except
+    on E:Exception do
+      raise Exception.Create('Erro ao carregar o login: ' + E.Message);
+  end;
+  sNome := qryTemp.Fields[0].AsString;
+  sEscola := qryTemp.Fields[1].AsString;
+end;
+
+function TDM.getVersaoBD: String;
+begin
+  qryTemp.Close;
+  try
+    qryTemp.Open('select descricao from versaobd');
+  except
+    on E:Exception do
+      raise Exception.Create('Erro ao carregar o versão do BD: ' + E.Message);
+  end;
+  result := qryTemp.Fields[0].AsString;
 end;
 
 end.

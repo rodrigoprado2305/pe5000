@@ -24,7 +24,10 @@ type
     edtEscola: TEdit;
     Image1: TImage;
     StyleBook1: TStyleBook;
+    lblVersaoBD: TLabel;
     procedure btnAcessarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure imgLogo1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,6 +57,9 @@ begin
     exit;
   end;
 
+  if ((edtNome.Text <> DM.psNome) or (edtEscola.Text <> DM.psEscola)) then
+    DM.setLogin(Trim(edtNome.Text), Trim(edtEscola.Text));
+
   DM.psNome := Trim(edtNome.Text);
   DM.psEscola := Trim(edtEscola.Text);
 
@@ -62,6 +68,19 @@ begin
   FormQuiz.lblErros.Text := '0.00';
   FormQuiz.lblPontos.Text := 'Você tem: 0 pontos';
   FormQuiz.Show;
+end;
+
+procedure TFormEntrada.FormShow(Sender: TObject);
+begin
+  edtNome.Text := DM.psNome;
+  edtEscola.Text := DM.psEscola;
+  lblVersaoBD.Visible := False;
+  lblVersaoBD.Text := DM.getVersaoBD;
+end;
+
+procedure TFormEntrada.imgLogo1Click(Sender: TObject);
+begin
+ lblVersaoBD.Visible := True;
 end;
 
 end.

@@ -10,3 +10,21 @@ select length(descricao), descricao, perguntaid, length(certa), certa, length(er
 select * from perguntas
 O gás carbônico é utilizados pelas plantas para a realização da fotossíntese.. --- a maior descricao eh 77
 Como você se sente hoje? --- a maior resposta e 24
+
+
+
+
+create table versaobd(
+  versaobdid integer constraint pk_versaobdid primary key AUTOINCREMENT,
+  descricao char(5)
+)
+insert into versaobd(descricao) values  ('1.0.0');
+select * from versaobd
+
+create table login(
+  loginid integer constraint pk_loginid primary key AUTOINCREMENT,
+  nome varchar(32),
+  escola varchar(40)
+)
+insert into login(nome, escola) values  ('', '');
+select * from login

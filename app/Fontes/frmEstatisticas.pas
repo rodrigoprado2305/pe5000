@@ -18,19 +18,19 @@ type
     recTela: TRectangle;
     lblParabens: TLabel;
     lblNome: TLabel;
+    imgLogo1: TImage;
+    Panel1: TPanel;
+    Button2: TButton;
+    lblEscola: TLabel;
+    lineBot: TLine;
+    lblResultados: TLabel;
+    lineTop: TLine;
     lblRespondidas1: TLabel;
     lblPergRespondidas: TLabel;
     lblAcerto1: TLabel;
     lblAcertos: TLabel;
-    lblErro1: TLabel;
+    Label1: TLabel;
     lblErros: TLabel;
-    imgLogo1: TImage;
-    lblLinhaBot: TLabel;
-    lblLinhaTop: TLabel;
-    lblResultados: TLabel;
-    lblEscola: TLabel;
-    Panel1: TPanel;
-    Button2: TButton;
     procedure btnCompartilharClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
   private
