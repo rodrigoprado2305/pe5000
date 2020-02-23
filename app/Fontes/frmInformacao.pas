@@ -17,7 +17,7 @@ type
     Rectangle2: TRectangle;
     barCabecalho: TToolBar;
     btnVoltar: TSpeedButton;
-    Memo1: TMemo;
+    lblPergunta: TLabel;
     procedure btnVoltarClick(Sender: TObject);
   private
     { Private declarations }
