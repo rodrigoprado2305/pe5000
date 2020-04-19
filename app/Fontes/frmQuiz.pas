@@ -48,6 +48,7 @@ type
     sRespClicada: String;
     sFrases: array[0..9] of string;
     bMusica: Boolean;
+    iContBanner: integer;
 
     procedure proximaFase;
     procedure tocaSom(sArqNome: String);
@@ -142,6 +143,7 @@ begin
   iPergRespondidas := 0;
   iAcertosSeq := 0;
   iFaseAtual := 0;
+  iContBanner := 0;
   proximaFase;
 end;
 
@@ -150,6 +152,7 @@ var
   iRandomPerg, i: Integer;
 begin
   inc(iFaseAtual);
+  inc(iContBanner);
   imgOk.Visible := False;
   imgErro.Visible := False;
 
@@ -205,6 +208,13 @@ begin
     inc(iErros);
   end;
   proximaFase;
+
+  if iContBanner = 6 then
+  begin
+    BannerAd1.LoadAd;
+    iContBanner := 0;
+  end;
+
   timer1.Enabled := False;
   btnResp01.Enabled := True;
   btnResp02.Enabled := True;
@@ -213,8 +223,6 @@ begin
   lblAcertos.Text := IntToStr(iAcertos);
   lblErros.Text := FormatFloat('0.00',(iAcertos*100)/iPergRespondidas);
   lblPontos.Text := 'Você tem: '+IntToStr(iPontos)+' pontos';
-  //lblErros.Text := IntToStr(iErros);
-   //    FormPontuacao.lblPercAcerto.Text := FormatFloat('0.00',(iAcerto*100)/NUM_FASES);
 end;
 
 procedure TFormQuiz.tocaSom(sArqNome: String);

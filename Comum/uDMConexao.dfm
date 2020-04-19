@@ -36,4 +36,12 @@ object DM: TDM
     Left = 248
     Top = 73
   end
+  object FDScript: TFDScript
+    SQLScripts = <>
+    Connection = BD
+    Params = <>
+    Macros = <>
+    Left = 184
+    Top = 128
+  end
 end

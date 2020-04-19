@@ -28,3 +28,61 @@ create table login(
 )
 insert into login(nome, escola) values  ('', '');
 select * from login
+
+select * from perguntas order by descricao
+
+select * from perguntas where descricao like '%Qual das opções abaixo %' order by descricao
+Qual das opções abaixo não representa uma parte do corpo humano?
+Qual das opções abaixo não representa dor em uma parte do corpo humano?
+-- selects manuais
+
+select * from perguntas where perguntaid = 2871
+select * from perguntas where perguntaid = 3184
+select * from perguntas where perguntaid = 1149
+select * from perguntas where perguntaid = 3367
+select * from perguntas where perguntaid = 506
+select * from perguntas where perguntaid = 1217
+select * from perguntas where perguntaid = 1224
+select * from perguntas where perguntaid = 4051
+select * from perguntas where perguntaid = 4382
+select * from perguntas where perguntaid = 4800
+select * from perguntas where perguntaid = 3653
+select * from perguntas where perguntaid = 4320
+select * from perguntas where perguntaid = 388
+select * from perguntas where perguntaid = 389
+select * from perguntas where perguntaid = 1128
+select * from perguntas where perguntaid = 1412
+select * from perguntas where perguntaid = 1954
+select * from perguntas where perguntaid = 2024
+select * from perguntas where perguntaid = 914
+select * from perguntas where perguntaid = 2978
+select * from perguntas where perguntaid = 1004
+
+
+-- updates manuais
+
+update perguntas set descricao = replace(descricao, '  ', ' ');
+update perguntas set descricao = replace(descricao, ' ?', '?');
+update perguntas set certa = '650' where perguntaid = 2871;
+update perguntas set certa = '30', errada = '25' where perguntaid = 3184;
+update perguntas set descricao = 'A palavra ... tem cinco letras e cinco fonemas ...' where perguntaid = 1149;
+update perguntas set errada = 'JILO' where perguntaid = 3367;
+update perguntas set descricao = 'Campinas não é uma capital, mas possui mais de 1 milhão de habitantes.' where perguntaid = 506;
+update perguntas set certa = 'Salá', errada = 'Sala' where perguntaid = 1224;
+update perguntas set certa = 'Rodrigo Prado', errada = 'Bill Gates' where perguntaid = 4051;
+update perguntas set certa = '180' where perguntaid = 4800;
+update perguntas set errada = 'Morcego' where perguntaid = 3653;
+update perguntas set errada = 'Descartável' where perguntaid = 4320;
+update perguntas set descricao = 'Qual a velocidade média de um tubarão?', certa = '60 km/hora', errada = '200 km/hora' where perguntaid = 388;
+update perguntas set descricao = 'Qual a velocidade média de um peixe-espada?', certa = '95 km/hora', errada = '10 km/hora' where perguntaid = 389;
+update perguntas set certa = 'Cubo', errada = 'Reta' where perguntaid = 1128;
+update perguntas set certa = 'Jogar' where perguntaid = 1412;
+update perguntas set certa = '3' where perguntaid = 1954;
+update perguntas set certa = '4', errada = '3' where perguntaid = 2024;
+update perguntas set certa = '26' where perguntaid = 914;
+update perguntas set certa = '2', errada = '0' where perguntaid = 1004;
+update versaobd set descricao = '1.0.1';
+
+
+
+
