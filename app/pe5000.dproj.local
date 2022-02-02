@@ -24,7 +24,7 @@
     <Transaction>2019/11/30 21:38:18.000.854,=D:\Desenvolvimento\Delphi\trunk\Projeto Educando\pe5000\app\erro.mp3</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5" Android="emulator-5554" Android64="emulator-5554"/>
+		<NoProfile iOSSimulator="iPhone5" Android="" Android64=""/>
 	</ActiveMobileDevice>
 	<BT_BuildType>AppStore</BT_BuildType>
 	<ProjectSortOrder AutoSort="0" SortType="0">

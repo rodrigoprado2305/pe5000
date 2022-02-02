@@ -9,7 +9,8 @@ uses
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.FMXUI.Wait,
   FireDAC.Comp.UI, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  FireDAC.Comp.ScriptCommands, FireDAC.Stan.Util, FireDAC.Comp.Script;
+  FireDAC.Comp.ScriptCommands, FireDAC.Stan.Util, FireDAC.Comp.Script,
+  FireDAC.Phys.SQLiteWrapper.Stat;
 
 type
   TDM = class(TDataModule)
@@ -48,9 +49,8 @@ procedure TDM.atualizacoesBD;
 var
   slScript: TStringList;
 begin
+  slScript := TStringList.Create;
   try
-    slScript := TStringList.Create;
-
     if getVersaoBD = '1.0.0' then
     begin
       slScript.Text := // atulizando primeira vez o banco de dados, 19/04/2020
@@ -90,7 +90,6 @@ begin
     begin
       //
     end;
-
   finally
     slScript.Free;
   end;
